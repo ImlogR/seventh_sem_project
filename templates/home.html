@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Camera System</title>
+    <link rel="stylesheet" href="/static/assets/bootstrap/css/bootstrap.min.css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic"
+        rel="stylesheet" />
+    <style>
+        /* New CSS styles go here */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: white;
+        }
+
+        header {
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 40px 0;
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            font-weight: bold;
+            background-color: #FF6B6B;
+            /* Red */
+            border-color: #FF6B6B;
+        }
+
+
+
+        .btn-info {
+            font-weight: bold;
+            background-color: #66FF6B;
+            /* Green */
+            border-color: brown;
+        }
+
+        footer {
+            background-color: #1E2D4D;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    /* Header Section */
+    <header>
+        <div class="container">
+            /*Header Title */
+            <h1 class="text-black py-5" style="color: #FF6B6B;">Object Detection System</h1>
+            <b class="text-danger"></b>
+        </div>
+    </header>
+    <section>
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <!-- /*Card for Image detection */ -->
+
+                <div class="col-md-4 mb-4">
+                    <div class="card bg-primary text-white">
+                        <div class="card-body text-center">
+                            <p class="fw-bold card-text mb-2">Image</p>
+                            <h5 class="card-title">Image Processing</h5>
+                            <button class="btn btn-primary btn-sm" type="button"
+                                onclick="window.location.href='image'">Press Here</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- /*Card for video detection */ -->
+
+                <div class="col-md-4 mb-4">
+                    <div class="card bg-primary text-white">
+                        <div class="card-body text-center">
+                            <p class="fw-bold card-text mb-2">Video</p>
+                            <h5 class="card-title">Video Processing</h5>
+                            <button class="btn btn-primary btn-sm" type="button"
+                                onclick="window.location.href='video'">Press Here</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- /*Card for webcam detection */ -->
+
+                <div class="col-md-4 mb-4">
+                    <div class="card bg-primary text-white">
+                        <div class="card-body text-center">
+                            <p class="fw-bold card-text mb-2">Camera</p>
+                            <h5 class="card-title">Fire Detection using Webcam</h5>
+                            <button class="btn btn-primary btn-sm" type="button"
+                                onclick="window.location.href='/'">Press
+                                Here</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-white text-black">
+        <div class="container">
+        </div>
+    </footer>
+    <!-- Loading Bootstartp -->
+    <script src="/static/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/static/assets/js/bold-and-dark.js"></script>
+</body>
+
+</html>
