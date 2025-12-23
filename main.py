@@ -24,7 +24,7 @@ def play_alarm_sound_function(): # defined function to play alarm post fire dete
 def send_mail_function(): # defined function to send mail post fire detection using threading
     
     # recipientmail = recipientmail.lower() # To lower case mail
-    recipientmail = "nikitarai0000@gmail.com" # recipients mail
+    recipientmail = "email@example.com" # recipients mail
     
     try:
         sender_mail = os.getenv("SENDER_EMAIL")
