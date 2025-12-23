@@ -55,11 +55,14 @@ Folder structure:
         python3 virtualenv venv
 
 - macOS/Linux
-    source venv/bin/activate
+
+        source venv/bin/activate
 - Windows
-    venv\Scripts\activate
+
+        venv\Scripts\activate
 
 2) Install dependencies:
+
         pip install -r requirements.txt
 
 
@@ -97,7 +100,7 @@ recipientmail = "email@example.com"
 Change it to your preferred recipient.
 
 # Running the App
-    python app.py
+    python3 app.py
 
 The Flask server runs in debug mode:
 
