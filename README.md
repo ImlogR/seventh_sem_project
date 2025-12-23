@@ -24,6 +24,7 @@ This project is a Flask-based computer vision app that:
 
 ## Project Structure
 Folder structure:
+
 .
 ├── predictedvideo/         # output of the processed video from YOLOv5
 │ ├── output_video.mp4
@@ -50,10 +51,11 @@ Folder structure:
 ## Installation
 
 1) Create and activate a virtual environment (optional but recommended):
+
     python3 virtualenv venv
-# macOS/Linux
+### macOS/Linux
     source venv/bin/activate
-# Windows
+### Windows
     venv\Scripts\activate
 
 2) Install dependencies:
@@ -72,10 +74,13 @@ Notes:
 1) Create a .env file in the project root
 
 Copy .env_demo to .env:
+
     cp .env_demo .env
 
 Edit .env:
+
 SENDER_EMAIL=your_email@gmail.com
+
 SENDER_PASSWORD=your_app_password
 
 Important:
@@ -100,18 +105,23 @@ Default URL: http://127.0.0.1:5000/
 # Navigation/Routes
 
 - /
+
 Renders templates/webcam.html (webcam page)
 
 - /video_feed
+
 Streams MJPEG frames from generate_frames() for the browser
 
 - /home
+
 Renders templates/home.html
 
 - /image
+
 Loads image.jpg, runs YOLOv5 detection, opens an OpenCV window with results, and renders templates/image.html
 
 - /video
+
 Opens video.mp4, runs YOLOv5 detection frame-by-frame, displays an OpenCV window, and renders templates/video.html
 
 ## How Fire Detection Works
@@ -125,23 +135,17 @@ When a fire region is detected:
 
 # Notes and Limitations
 
-The webcam is opened globally using cv2.VideoCapture(0). If your camera index is different, change it.
-
-The generator currently reads frames twice per loop (once for fire detection and once for YOLO). This may reduce performance or cause sync issues depending on hardware.
-
-cv2.imshow(...) is used inside the streaming loop; this can conflict with running a web server in some environments.
-
-Email sending requires valid credentials and SMTP access.
+- The webcam is opened globally using cv2.VideoCapture(0). If your camera index is different, change it.
+- The generator currently reads frames twice per loop (once for fire detection and once for YOLO). This may reduce performance or cause sync issues depending on hardware.
+- cv2.imshow(...) is used inside the streaming loop; this can conflict with running a web server in some environments.
+- Email sending requires valid credentials and SMTP access.
 
 # Suggested Improvements
 
-Read one frame per loop and reuse it for both fire detection and YOLO results
-
-Move cv2.imshow usage out of server execution (or make it optional with a flag)
-
-Make recipient email configurable via .env
-
-Add basic rate limiting or cooldown for alarms/emails
+- Read one frame per loop and reuse it for both fire detection and YOLO results
+- Move cv2.imshow usage out of server execution (or make it optional with a flag)
+- Make recipient email configurable via .env
+- Add basic rate limiting or cooldown for alarms/emails
 
 ## License
 This project is licensed under the MIT License.
