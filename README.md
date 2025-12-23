@@ -25,49 +25,50 @@ This project is a Flask-based computer vision app that:
 ## Project Structure
 Folder structure:
 
-.
-├── predictedvideo/         # output of the processed video from YOLOv5
-│ ├── output_video.mp4
-├── static/assets/          # contains assets bootstrap and js files for UI
-│ ├── bootstrap
-│ ├── js
-├── templates/              # HTML files for UI
-│ ├── webcam.html
-│ ├── home.html
-│ ├── image.html
-│ └── video.html
-├── .env_demo               # example .env file
-└── .gitignore
-├── fire_Alarm.mp3          # alarm sound file
-├── fire_detection.xml      # cascade model file used by OpenCV
-├── image.jpg               # used by /image route
-├── LICENSE                 # LICENSE
-├── main.py                 # main Flask app 
-├── README.md               # README
-├── requirements.txt        # Required modules
-├── video.mp4               # used by /video route
+    .
+    ├── predictedvideo/         # output of the processed video from YOLOv5
+    │ ├── output_video.mp4
+    ├── static/assets/          # contains assets bootstrap and js files for UI
+    │ ├── bootstrap
+    │ ├── js
+    ├── templates/              # HTML files for UI
+    │ ├── webcam.html
+    │ ├── home.html
+    │ ├── image.html
+    │ └── video.html
+    ├── .env_demo               # example .env file
+    └── .gitignore
+    ├── fire_Alarm.mp3          # alarm sound file
+    ├── fire_detection.xml      # cascade model file used by OpenCV
+    ├── image.jpg               # used by /image route
+    ├── LICENSE                 # LICENSE
+    ├── main.py                 # main Flask app 
+    ├── README.md               # README
+    ├── requirements.txt        # Required modules
+    ├── video.mp4               # used by /video route
 
 
 ## Installation
 
 1) Create and activate a virtual environment (optional but recommended):
 
-    python3 virtualenv venv
-### macOS/Linux
-    source venv/bin/activate
-### Windows
-    venv\Scripts\activate
+        python3 virtualenv venv
+
+    - macOS/Linux
+        source venv/bin/activate
+    - Windows
+        venv\Scripts\activate
 
 2) Install dependencies:
     pip install -r requirements.txt
 
 
-Notes: 
+Installation Notes: 
 - playsound can be OS-dependent. If you face issues, you may need OS-specific audio support.
 
 - YOLOv5 is loaded from Torch Hub and may download weights on first run (requires internet the first time).
 
-- Email Setup (Gmail): This program sends an alert using Gmail SMTP (smtp.gmail.com:587) and reads credentials from environment variables. Be sure to change the recipientmail = "email@example.com" to your email to view the sent email for sanity check (main.py line 27).
+- Email Setup (Gmail): This program sends an alert using Gmail SMTP (smtp.gmail.com:587) and reads credentials from environment variables.
 
 # To setup the email environment follow the steps
 
@@ -79,9 +80,9 @@ Copy .env_demo to .env:
 
 Edit .env:
 
-SENDER_EMAIL=your_email@gmail.com
+    SENDER_EMAIL=your_email@gmail.com
 
-SENDER_PASSWORD=your_app_password
+    SENDER_PASSWORD=your_app_password
 
 Important:
 - For Gmail, use an App Password (recommended) instead of your normal password.
